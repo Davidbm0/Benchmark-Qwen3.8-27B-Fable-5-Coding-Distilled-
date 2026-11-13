@@ -1,0 +1,42 @@
+[
+  {
+    "id": "si1_delay",
+    "fable27b": {
+      "ok": true,
+      "t": 16.8,
+      "attempts": 1
+    }
+  },
+  {
+    "id": "si2_impedance",
+    "fable27b": {
+      "ok": true,
+      "t": 243.6,
+      "attempts": 1
+    }
+  },
+  {
+    "id": "emb1_isr",
+    "fable27b": {
+      "ok": true,
+      "t": 173.8,
+      "attempts": 2
+    }
+  },
+  {
+    "id": "cod_csv",
+    "fable27b": {
+      "ok": true,
+      "t": 101.9,
+      "attempts": 1
+    }
+  },
+  {
+    "id": "diag_crosstalk",
+    "fable27b": {
+      "ok": true,
+      "t": 151.1,
+      "attempts": 1
+    }
+  }
+]

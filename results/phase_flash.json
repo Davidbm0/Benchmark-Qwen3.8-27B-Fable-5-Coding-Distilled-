@@ -1,0 +1,42 @@
+[
+  {
+    "id": "si1_delay",
+    "flashnext": {
+      "ok": true,
+      "t": 11.2,
+      "attempts": 1
+    }
+  },
+  {
+    "id": "si2_impedance",
+    "flashnext": {
+      "ok": true,
+      "t": 47.8,
+      "attempts": 1
+    }
+  },
+  {
+    "id": "emb1_isr",
+    "flashnext": {
+      "ok": true,
+      "t": 126.6,
+      "attempts": 2
+    }
+  },
+  {
+    "id": "cod_csv",
+    "flashnext": {
+      "ok": true,
+      "t": 29.7,
+      "attempts": 1
+    }
+  },
+  {
+    "id": "diag_crosstalk",
+    "flashnext": {
+      "ok": true,
+      "t": 111.1,
+      "attempts": 1
+    }
+  }
+]
