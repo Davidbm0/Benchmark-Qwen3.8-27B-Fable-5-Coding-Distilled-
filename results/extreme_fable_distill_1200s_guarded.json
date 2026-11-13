@@ -1,0 +1,34 @@
+[
+  {
+    "id": "p1_dijkstra",
+    "fable27b": {
+      "ok": true,
+      "t": 87.1,
+      "attempts": 1
+    }
+  },
+  {
+    "id": "p2_microstrip",
+    "fable27b": {
+      "ok": true,
+      "t": 1075.5,
+      "attempts": 4
+    }
+  },
+  {
+    "id": "p3_txengine",
+    "fable27b": {
+      "ok": false,
+      "t": 1185.2,
+      "attempts": 4
+    }
+  },
+  {
+    "id": "p4_pdn",
+    "fable27b": {
+      "ok": true,
+      "t": 271.8,
+      "attempts": 1
+    }
+  }
+]
