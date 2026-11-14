@@ -1,0 +1,22 @@
+[
+  {
+    "test": "h3_traceback",
+    "ok": true,
+    "why": "verify+hidden=PASS",
+    "t": 98.8,
+    "turns": 9,
+    "reads": 5,
+    "edits": 1,
+    "edited_files": [
+      "config.py"
+    ],
+    "changed_files": [
+      "__pycache__/config.cpython-314.pyc",
+      "config.py"
+    ],
+    "hallucinations": 0,
+    "done_called": true,
+    "reasoning_chars": 1913,
+    "last_err": ""
+  }
+]

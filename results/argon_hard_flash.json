@@ -1,0 +1,65 @@
+[
+  {
+    "test": "h1_inventory",
+    "ok": true,
+    "why": "verify=PASS pinned=ok",
+    "t": 240.3,
+    "turns": 16,
+    "reads": 7,
+    "edits": 4,
+    "edited_files": [
+      "inventory/models.py",
+      "inventory/service.py"
+    ],
+    "changed_files": [
+      "inventory/__pycache__/models.cpython-314.pyc",
+      "inventory/__pycache__/service.cpython-314.pyc",
+      "inventory/models.py",
+      "inventory/service.py"
+    ],
+    "hallucinations": 0,
+    "done_called": true,
+    "reasoning_chars": 3164,
+    "last_err": "ERROR: unknown tool 'run_file'"
+  },
+  {
+    "test": "h2_race",
+    "ok": true,
+    "why": "verify=PASS sync=da",
+    "t": 213.5,
+    "turns": 13,
+    "reads": 4,
+    "edits": 1,
+    "edited_files": [
+      "queue.py"
+    ],
+    "changed_files": [
+      "__pycache__/queue.cpython-314.pyc",
+      "queue.py"
+    ],
+    "hallucinations": 0,
+    "done_called": true,
+    "reasoning_chars": 6178,
+    "last_err": "ERROR: command timed out (60s), killed"
+  },
+  {
+    "test": "h3_traceback",
+    "ok": true,
+    "why": "verify+hidden=PASS",
+    "t": 31.8,
+    "turns": 12,
+    "reads": 5,
+    "edits": 1,
+    "edited_files": [
+      "config.py"
+    ],
+    "changed_files": [
+      "__pycache__/config.cpython-314.pyc",
+      "config.py"
+    ],
+    "hallucinations": 0,
+    "done_called": true,
+    "reasoning_chars": 2913,
+    "last_err": "ERROR: unknown tool 'run_file'"
+  }
+]
