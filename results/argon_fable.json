@@ -1,0 +1,60 @@
+[
+  {
+    "test": "t1_ci_debug",
+    "ok": true,
+    "why": "harness=PASS pinned=ok",
+    "t": 18.8,
+    "turns": 6,
+    "reads": 3,
+    "edits": 1,
+    "edited_files": [
+      "scripts/deploy.sh"
+    ],
+    "changed_files": [
+      "scripts/deploy.sh"
+    ],
+    "hallucinations": 0,
+    "done_called": true,
+    "reasoning_chars": 1322,
+    "last_err": "",
+    "scorer_note": "rescorat: scorer initial folosea /usr/bin/bash (WSL) care nu vedea caiile Windows; fix = Git Bash"
+  },
+  {
+    "test": "t2_billing",
+    "ok": true,
+    "why": "TEST PASS",
+    "t": 104.5,
+    "turns": 11,
+    "reads": 4,
+    "edits": 1,
+    "edited_files": [
+      "billing/processor.py"
+    ],
+    "changed_files": [
+      "billing/processor.py"
+    ],
+    "hallucinations": 0,
+    "done_called": true,
+    "reasoning_chars": 7607,
+    "last_err": ""
+  },
+  {
+    "test": "t3_harness",
+    "ok": true,
+    "why": "src_untouched=True test=PASS",
+    "t": 111.1,
+    "turns": 14,
+    "reads": 6,
+    "edits": 2,
+    "edited_files": [
+      "tests/test_config.py"
+    ],
+    "changed_files": [
+      "tests/test_config.py"
+    ],
+    "hallucinations": 0,
+    "done_called": false,
+    "reasoning_chars": 16502,
+    "last_err": ""
+  }
+]

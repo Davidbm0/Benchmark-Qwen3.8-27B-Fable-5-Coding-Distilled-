@@ -12,28 +12,37 @@ Benchmark of **Qwen3.8-27B-Fable-5-Coding-Distilled** (GGUF, Q3_K_M, llama.cpp, 
 
 ## Suite 1 — Phase 1: engineering one-shot
 
-5 problems checked by verifiers: propagation delay, impedance, ISR handling, CSV parsing, crosstalk diagnosis.
+5 verifier-checked problems (propagation delay, impedance, ISR, CSV parsing, crosstalk).
 
 | Model | Score | Total time |
 |---|---|---|
 | Fable Distill Q3_K_M | 5/5 | 687 s |
 | Flash-Next IQ3_XXS | 5/5 | 326 s |
 
-Both solve all five; Flash-Next is ~2x faster.
-
 ## Suite 2 — Extreme: hard coding, 1200 s timebox
 
-4 problems (Dijkstra on extended state space, microstrip calculator, TX engine with lock semantics, PDN network), self-repair loop, max 4 attempts inside the timebox.
+4 problems (Dijkstra, microstrip calculator, TX engine, PDN), self-repair loop, max 4 attempts.
 
 | Model | Score | Total time |
 |---|---|---|
 | Fable Distill Q3_K_M | 3/4 | 2620 s |
 | Flash-Next IQ3_XXS | 2/4 | 1185 s |
 
-Fable solves P2 (microstrip) after 4 attempts inside the timebox; Flash fails P2 and P3 (TX engine). Flash is faster on what it solves.
+## Suite 3 — Argon suite: agentic debugging (easy)
 
-Note: several suite asserts were verified against a reference implementation (`extreme_ref.py`); P2/P4 asserts in the original suite were mathematically off — results are interpreted against the reference values, documented in the script header.
+3 fixtures with a real tool loop (`read_file`, `run_cmd`, `edit_file`, `list_files`), 1200 s / 14 turns:
 
-Reproduce: `python scripts/bench_extreme.py flash` / `... fable`
+- T1: bash `[ ]` quoting bug in a CI deploy script (stderr must be empty)
+- T2: float rounding in a billing cent calculation (naive float gives 254 instead of 255)
+- T3: defective test harness — the source is correct, the mock is wrong (root-cause test)
 
-More suites (agentic debugging) will be added as the bench progresses.
+| Model | Score | Total time |
+|---|---|---|
+| Fable Distill Q3_K_M | 3/3 | 234 s |
+| Flash-Next IQ3_XXS | 3/3 | 326 s |
+
+Tie on correctness. Fable is more turn-disciplined on T1 (6 turns, calls `done`); Flash produced the stronger T2 fix (`Decimal` + `ROUND_HALF_EVEN` vs `int()` -> `round()`). Both passed the T3 harness trap (left the correct source untouched, fixed the mock).
+
+Reproduce: `python scripts/bench_argon.py` (env: `ARGON_SERVER`, `ARGON_MODEL`)
+
+Hard agentic suite and agent-loop bench to follow.
