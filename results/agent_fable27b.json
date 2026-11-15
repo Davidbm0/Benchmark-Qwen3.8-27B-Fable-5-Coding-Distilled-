@@ -1,0 +1,19 @@
+[
+ {
+  "id": "t1_binary_log",
+  "fable27b": {
+   "ok": false,
+   "t": 608.8,
+   "rounds": 1,
+   "note": "budget"
+  }
+ },
+ {
+  "id": "t2_jobqueue",
+  "fable27b": {
+   "ok": true,
+   "t": 450.3,
+   "rounds": 3
+  }
+ }
+]

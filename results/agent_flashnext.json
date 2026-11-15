@@ -1,0 +1,18 @@
+[
+ {
+  "id": "t1_binary_log",
+  "flashnext": {
+   "ok": false,
+   "t": 325.1,
+   "rounds": 3
+  }
+ },
+ {
+  "id": "t2_jobqueue",
+  "flashnext": {
+   "ok": false,
+   "t": 327.8,
+   "rounds": 3
+  }
+ }
+]
